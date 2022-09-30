@@ -15,4 +15,4 @@ You must also make sure that the envinfopass file in the root directory of the p
 
 The url to see the variables depending on the configured environment is
 
-http://localhost:port_number/envinfo
+http://localhost/envinfo
