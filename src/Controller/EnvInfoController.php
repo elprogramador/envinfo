@@ -18,7 +18,7 @@ class EnvInfoController extends AbstractController
         $util = new Util();
         $variables = array();
         $finder = new Finder();
-        $finder->files()->ignoreDotFiles(false)->in(dirname(dirname(dirname(dirname(__DIR__)))));
+        $finder->files()->ignoreDotFiles(false)->in(dirname(__DIR__, 5));
         if ($finder->hasResults()) {}
         foreach ($finder as $file) {
             $fileNameWithExtension = $file->getRelativePathname();
