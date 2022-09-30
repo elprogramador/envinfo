@@ -62,4 +62,7 @@ services:
         
         
 
+The url to see the variables depending on the configured environment is
+
+http://localhost/envinfo
 
