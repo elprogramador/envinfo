@@ -1,5 +1,5 @@
-1 .In the composer.json file in require-dev
-put "jlle/env-info" : "0.1.*"
+1. In the composer.json file in require-dev
+put "jlle/env-info": "^0.1.1"
 
 It is important that you do not put yourself in
 
@@ -7,7 +7,14 @@ It is important that you do not put yourself in
 
 }
 
-since it would go up to production
+In autoload-dev from the composer.json file put
+
+"autoload-dev": {
+  "psr-4": {
+      "App\\Tests\\": "tests/",
+      "Jlle\\EnvInfo\\": "vendor/jlle/env-info/src/"
+  }
+},
 
 2. At the root of the project and at the same level as composer.json
 
@@ -23,3 +30,36 @@ envinfo:
   path: /envinfo
   methods: GET
   controller: Jlle\EnvInfo\Controller\EnvInfoController::envInfo
+  
+4. In the config/services.yaml file
+Introduce:
+
+Jlle\EnvInfo\:
+        resource: '../vendor/jlle/env-info/src/' 
+        
+        
+Example of services.yaml file:
+
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+            
+    Jlle\EnvInfo\:
+        resource: '../vendor/jlle/env-info/src/'     
+        
+        
+
+
