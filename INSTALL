@@ -1,0 +1,25 @@
+1 .In the composer.json file in require-dev
+put "jlle/env-info" : "0.1.*"
+
+It is important that you do not put yourself in
+
+"requires": {
+
+}
+
+since it would go up to production
+
+2. At the root of the project and at the same level as composer.json
+
+create an empty file with the name: envinfopass
+
+This is so that even in a development environment, the information cannot be accessed if this file does not exist.
+In production should not be created
+
+3. In the config/routes.yaml file
+Introduce:
+
+envinfo:
+  path: /envinfo
+  methods: GET
+  controller: Jlle\EnvInfo\Controller\EnvInfoController::envInfo
