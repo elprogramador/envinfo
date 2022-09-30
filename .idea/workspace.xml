@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d2b071e-50b3-4f0c-a440-79c6b21c4b83" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="ProjectId" id="2FOYD9DhUjQWdGMPtAIWGsyvg7g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d2b071e-50b3-4f0c-a440-79c6b21c4b83" name="Default Changelist" comment="" />
+      <created>1664364474554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664364474554</updated>
+      <workItem from="1664364475700" duration="5653000" />
+      <workItem from="1664537737300" duration="170000" />
+      <workItem from="1664537923588" duration="353000" />
+      <workItem from="1664538569195" duration="4809000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1152" y="553" width="1398" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1664538718034">
+      <screen x="1080" y="526" width="1920" height="1080" />
+    </state>
+    <state x="1152" y="553" width="1398" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1080.526.1920.1080/0.553.1080.1367@1080.526.1920.1080" timestamp="1664538718034" />
+    <state x="1762" y="799" width="649" height="568" key="NewPhpClassDialog" timestamp="1664538877584">
+      <screen x="1080" y="526" width="1920" height="1080" />
+    </state>
+    <state x="1762" y="799" width="649" height="568" key="NewPhpClassDialog/1080.526.1920.1080/0.553.1080.1367@1080.526.1920.1080" timestamp="1664538877584" />
+  </component>
+</project>
