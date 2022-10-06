@@ -1,4 +1,6 @@
-Current version v0.1.1
+Current version v0.1.2
+
+This package is useful for displaying variables found in .env files in a more readable way. By accessing the url you will be able to show the variables that you have active, excluding information that is not relevant and in a non-duplicated way
 
 Important note
 
