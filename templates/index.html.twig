@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if environment == "local" %}
+         <input type="button" value=".env.local" style="background-color: green">
+    {% else %}
+        <input type="button" value=".env.local">
+    {% endif %}
+
+    {% if environment == "test" %}
+        <input type="button" value=".env.test" style="background-color: green">
+    {% else %}
+        <input type="button" value=".env.test">
+    {% endif %}
+
+    {% if environment == "prod" %}
+        <input type="button" value=".env.prod" style="background-color: green">
+    {% else %}
+        <input type="button" value=".env.prod">
+    {% endif %}
+    <br><br>
+
+    {% for dat in data %}
+        [{{ dat.extension }}] {{ dat.key }} = {{ dat.value }}
+        <br>
+    {% endfor %} 
+
+{% endblock %}

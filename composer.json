@@ -1,7 +1,7 @@
 {
     "name": "jlle/env-info",
     "description": "Easy env file information",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "keywords": ["env", "validation", "information", "env.local", "env.prod", "env.local"],
     "license": "MIT",
     "authors": [
@@ -13,7 +13,9 @@
     "require": {
         "php": ">=7.2",
         "symfony/runtime": "^5.4",
-        "doctrine/annotations": "^1.13"
+        "doctrine/annotations": "^1.13",
+        "twig/twig": "^3.4",
+        "symfony/templating": "^6.0"
     },
     "config": {
         "allow-plugins": {

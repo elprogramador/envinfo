@@ -8,12 +8,22 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Finder\Finder;
-use Jlle\EnvInfo\Inicio\Inicial;
+use Twig\Environment;
+use Twig\TwigFunction;
+use Twig\Loader\FilesystemLoader;
+
 
 class EnvInfoController extends AbstractController
 {
+    /**
+     * @param KernelInterface $kernelInterface
+     * 
+     * @return Response view
+     */
     public function envInfo(KernelInterface $kernelInterface): Response
     {
+        $loader = new FilesystemLoader(dirname(__DIR__,2)."/templates");
+        $twig = new Environment($loader);
         $allowUse = false;
         $util = new Util();
         $variables = array();
@@ -61,6 +71,8 @@ class EnvInfoController extends AbstractController
         }
         array_multisort(array_column($variables, 'extension'), SORT_ASC, $variables);
         $str = "";
+        $arr = array();
+
         foreach ($variables as $key => $var) {
             $parExtension = explode(".", $var['extension']);
             if (isset($parExtension[2])) {
@@ -68,15 +80,20 @@ class EnvInfoController extends AbstractController
             } else {
                 $strExtension = ".".$parExtension[1];
             }
-            $str .= "<span style='font-weight: bold'>[".$strExtension."]</span> <span style='color: green; font-weight: bold'>".$key."</span> = ".$var['value']."<br>";
+           
+            $arr[] = [
+                "key" => $key,
+                "value" => $var['value'],
+                "extension" => $strExtension
+            ];
         }
 
         if ($allowUse === false) {
             $str = "Out of use";
         }
 
-        return new Response(
-            '<html><body>'.$str.'</body></html>'
-        );
+        return new Response($twig->render('index.html.twig', 
+            ["data" => $arr, "environment" => $environment]
+        ));
     }
 }
