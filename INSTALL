@@ -61,8 +61,14 @@ services:
         resource: '../vendor/jlle/env-info/src/'     
         
         
+then you will have to launch composer install        
 
 The url to see the variables depending on the configured environment is
 
 http://localhost/envinfo
+
+remember that if you have specified a port you should put it
+
+http://localhost:8000/envinfo
+
 
